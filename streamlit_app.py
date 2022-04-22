@@ -20,6 +20,8 @@ streamlit.multiselect("Pick some fruits:" ,list(my_fruit_list.index),['Avocado',
 streamlit.dataframe(my_fruit_list)
 
 streamlit.header('Fruityvice Fruit Advice')
+fruit_choice = stremlit.text_input('what fruit would you like information about?','kiwi')
+streamlit.write('The User entered', fruit_choice )
 
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
